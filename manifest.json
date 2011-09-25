@@ -1,0 +1,13 @@
+{
+	"name": "chromedown",
+	"version": "0.1",
+	"description": "Converts markdown to html with some readable styles",
+	"icons": {"48": "48.png"},
+	"content_scripts": [{
+		"matches": ["*://*/*.mkd", "*://*/*.md", "*://*/*.markdown"],
+		"css": ["chromedown.css"],
+		"js": ["jquery.min.js", "showdown.min.js", "chromedown.js"]
+	}],
+	"run_at": "document_end",
+	"permissions": ["<all_urls>"]
+}
